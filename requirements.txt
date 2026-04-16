@@ -1,0 +1,4 @@
+# Core scripts intentionally use Python standard library only.
+# No external dependency is required for the default pipeline.
+#
+# If you later want richer PDF rendering or templating, add optional packages here.
