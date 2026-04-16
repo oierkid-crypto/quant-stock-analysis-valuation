@@ -1,6 +1,6 @@
 ---
 name: gs-single-stock-pipeline-v2
-description: Shareable V2 pipeline for single-stock analysis. Trigger on prompts like “帮我分析 XXXX”. Uses deep research first, then narrative-aware GS-style valuation, then a clear upside/rating conclusion.
+description: Complete V2 single-stock valuation workflow. Starts with deep research, links narrative back to fundamentals, rebuilds value through SOTP/hybrid valuation, and runs fragility audit before the final rating.
 version: 2.1.0
 author: Hermes Agent
 license: MIT
