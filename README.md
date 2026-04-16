@@ -52,12 +52,12 @@ If someone searches GitHub for terms like:
 
 this repo is intended to be directly relevant.
 
-## Core ideas
+## Core value proposition
 This workflow is built around **completeness**. A usable stock-research pipeline should connect the whole chain:
 
 > **narrative → fundamentals → SOTP valuation → fragility audit → target price / rating / PDF note**
 
-Its four core ideas are:
+Its four core value pillars are:
 
 1. **Narrative and fundamentals must be linked**  
    A rerating story matters only when it can be traced back to real revenue, profit-pool quality, or segment economics.
@@ -215,12 +215,12 @@ You still need to do the actual research and complete the structured input.
 
 这个仓库名称和首页说明都能比较直接命中这些需求。
 
-## 核心理念
+## 核心价值主张
 这套 workflow 最重要的不是某一个模板，而是**完整性**。一套真正可用的股票研究流程，应该把这条链路打通：
 
 > **叙事 → 基本面 → SOTP 估值 → 脆弱性检测 → 目标价 / 评级 / PDF 文档**
 
-它的四个核心理念是：
+它的四个核心价值支柱是：
 
 1. **叙事必须和基本面打通**  
    任何重估故事，最终都要能够落回真实的收入来源、利润池质量、分部经济结构。
