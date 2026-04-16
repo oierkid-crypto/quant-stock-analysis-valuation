@@ -1,8 +1,8 @@
-# Stock Analysis PDF Pipeline
+# Institutional Equity Research Pipeline
 
 <p align="center">
-  <b>A complete single-stock research workflow: narrative → fundamentals → SOTP valuation → fragility audit → analyst-style PDF.</b><br/>
-  <b>一套完整的单票研究 workflow：叙事 → 基本面 → SOTP 估值 → 脆弱性检测 → analyst-style PDF。</b>
+  <b>Goldman Sachs-style institutional equity research methodology for single-stock work: narrative → fundamentals → SOTP valuation → fragility audit → analyst note.</b><br/>
+  <b>更像机构研究方法论仓库，而不是工具仓库：叙事 → 基本面 → SOTP 估值 → 脆弱性审计 → analyst note。</b>
 </p>
 
 <p align="center">
@@ -13,334 +13,359 @@
 <p align="center">
   <a href="./LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-green.svg"></a>
   <a href="./requirements.txt"><img alt="Python 3.9+" src="https://img.shields.io/badge/python-3.9%2B-blue.svg"></a>
-  <img alt="Stock Analysis" src="https://img.shields.io/badge/stock-analysis-orange.svg">
-  <img alt="PDF Reports" src="https://img.shields.io/badge/pdf-reports-red.svg">
+  <img alt="Institutional Equity Research" src="https://img.shields.io/badge/institutional-equity_research-1f3b5c.svg">
+  <img alt="SOTP Valuation" src="https://img.shields.io/badge/SOTP-valuation-6b46c1.svg">
 </p>
+
+> **Positioning note**  
+> This repository is inspired by institutional sell-side research structure and Goldman Sachs-style deliverable discipline. It is **not** affiliated with, endorsed by, or published by Goldman Sachs.
 
 ---
 
 <a id="english"></a>
 # English
 
-## What this repo is
-**Stock Analysis PDF Pipeline** is a shareable single-stock research workflow for prompts like:
+## What this repository is
+**Institutional Equity Research Pipeline** is a bilingual methodology repo for people who want single-stock work to read like **institutional equity research**, not like a loose memo, a retail blog post, or a spreadsheet with a target multiple pasted on top.
+
+It is designed for workflows such as:
 - `Analyze [ticker]`
-- `Give me a view on [company]`
-- `Help me value [stock]`
+- `Give me an institutional view on [company]`
 - `Build a target price framework for [company]`
+- `Re-underwrite the narrative for [stock]`
 
-It is built for people who want something more complete than:
-- narrative-only research notes,
-- rigid spreadsheet valuation with no market context, or
-- generic stock templates that stop before a real investment conclusion.
+The ambition here is not “yet another stock template.”  
+The ambition is to make the research chain coherent from first principle to final conclusion.
 
-This repo is designed as a **complete stock valuation workflow**, not just a memo template or a multiple calculator:
-- start from **deep research**
-- translate the **market narrative** into real revenue/profit structure
-- rebuild valuation through **SOTP / hybrid / core-PE routers**
-- run a **fragility audit** before accepting the rerating story
-- deliver a readable **markdown / PDF analyst note**
+## Positioning
+This repository should be read as an **institutional research methodology repository**.
 
-## Search relevance
-If someone searches GitHub for terms like:
-- `stock analysis`
-- `stock valuation`
-- `equity research pipeline`
-- `SOTP valuation`
-- `investment memo PDF`
-- `single stock analysis`
+The intended keywords are:
+- `institutional equity research`
+- `equity research methodology`
+- `SOTP valuation model`
+- `single stock valuation framework`
+- `Goldman Sachs style research`
+- `narrative to fundamentals`
+- `fragility audit`
 
-this repo is intended to be directly relevant.
+## Core idea
+A serious research process should connect five layers into one chain:
 
-## Core value proposition
-This workflow is built around **completeness**. A usable stock-research pipeline should connect the whole chain:
+> **market narrative → fundamental structure → SOTP / hybrid valuation → fragility audit → analyst conclusion**
 
-> **narrative → fundamentals → SOTP valuation → fragility audit → target price / rating / PDF note**
+If any one of these layers is missing, the conclusion is weaker than it looks.
 
-Its four core value pillars are:
+## Why this framework exists
+A lot of public stock-analysis repos stop too early.
 
-1. **Narrative and fundamentals must be linked**  
-   A rerating story matters only when it can be traced back to real revenue, profit-pool quality, or segment economics.
+Some stop at:
+- data collection,
+- memo writing,
+- target multiple templates, or
+- thematic commentary.
 
-2. **Valuation should reflect business structure, not one blunt multiple**  
-   Different businesses need different routers: segment SOTP, hybrid PE/PS, or a simpler core-PE approach when SOTP would be fake precision.
+Institutional work requires more.
+It requires a process that can explain:
+- **what the market thinks the company is**,
+- **what the company economically is**,
+- **what part of the story is actually new**,
+- **how that story should enter valuation**,
+- **what fragility could invalidate the rerating**, and
+- **what target price / rating conclusion follows from that chain**.
 
-3. **Fragility must be part of the model, not a disclaimer at the end**  
-   Geographic concentration, channel concentration, litigation/IP risk, regulatory dependence, and delivery/warranty risk should be judged explicitly and translated into discounting when necessary.
+## Methodology pillars
+### 1. Narrative must be translated into economics
+A rerating story has no analytical value unless it can be mapped back to:
+- revenue pools,
+- profit-pool quality,
+- segment economics,
+- business mix, or
+- capital allocation logic.
 
-4. **The final output should read like an analyst note**  
-   The end product is a clear markdown/PDF document with valuation derivation, assumptions, target price, upside/downside, and risks — not an engineering dump.
+### 2. Valuation should reflect business structure
+A company with mixed-quality businesses should not be forced into one blunt multiple.
+This framework prefers:
+- **segment SOTP** when multiple businesses deserve different treatments,
+- **hybrid PE / PS** when one segment is profit mature and another is still scaling,
+- **simple core PE** only when additional complexity would be false precision.
 
-## Why this framework is complete
-Many public stock-analysis repos only cover one part of the job:
-- some focus on data collection
-- some focus on memo writing
-- some provide a valuation template only
-- some stop at narrative discussion
+### 3. Fragility is part of valuation, not a disclaimer
+This methodology treats fragility as a valuation input.
+That includes:
+- geographic concentration,
+- channel concentration,
+- litigation / IP exposure,
+- policy dependence,
+- supply-chain bottlenecks,
+- inventory / delivery / warranty risk.
 
-This repo is meant to hold the full chain together:
-- **Narrative layer** — what new story is the market trading?
-- **Fundamental layer** — where do revenue and profit actually come from?
-- **Valuation layer** — how should the company be valued segment by segment?
-- **Fragility layer** — what could invalidate the rerating?
-- **Delivery layer** — how do you turn the work into a readable investment document?
+The question is not whether risk exists.  
+The question is whether the risk deserves **disclosure only**, a **multiple haircut**, or a **scenario discount**.
 
-## What’s inside
-```text
-.
-├── SKILL.md
-├── README.md
-├── LICENSE
-├── .gitignore
-├── requirements.txt
-├── examples/
-│   └── sample-input.json
-├── templates/
-│   └── output-template.md
-└── scripts/
-    ├── quote_snapshot.py
-    ├── scaffold_input.py
-    ├── build_report.py
-    ├── render_pdf.py
-    └── run_pipeline.py
-```
+### 4. The final output should read like an analyst note
+The objective is a readable conclusion with:
+- company framing,
+- variant view,
+- valuation derivation,
+- target price,
+- upside / downside,
+- thesis risks,
+- evidence references.
 
-## Pipeline logic
-1. Confirm company identity and live market snapshot  
-2. Deep-research the business and segment structure  
-3. Identify the new narrative  
-4. Classify narrative maturity  
-5. Run the fragility audit  
-6. Rebuild valuation around real segment economics  
-7. Generate a readable markdown/PDF note with target price, upside/downside, and rating  
+## Goldman Sachs-style discipline, interpreted practically
+In this repository, “Goldman Sachs-style” means:
+- debate framing before conclusion,
+- valuation as a structured bridge rather than a slogan,
+- segment logic instead of theme-chasing,
+- explicit assumptions,
+- explicit downside / variant view,
+- institutional presentation discipline.
+
+It does **not** mean imitation of any firm's proprietary model.
+It means adopting the standard of clarity and rigor expected from institutional sell-side work.
+
+## SOTP valuation model, in plain English
+This framework emphasizes **Sum-of-the-Parts (SOTP)** when a company is really several economic engines under one ticker.
+
+Instead of asking only:
+- “What PE should the stock trade on?”
+
+it asks:
+- What are the real business segments?
+- Which segments are already profit-bearing?
+- Which segments are still in revenue scale-up?
+- Which segments deserve PE vs PS?
+- Which narratives are real and which are still optionality?
+- What is the implied equity value when those pieces are valued appropriately?
+
+That is the core difference between a superficial valuation memo and an institutional underwriting framework.
+
+## Repository scope
+This repository includes a reusable structure for:
+- market snapshot
+- business decomposition
+- narrative classification
+- fragility audit
+- valuation routing
+- final analyst-style document generation
+
+It is a **methodology + template + lightweight script** repository.
+It is not a fully autonomous research engine.
 
 ## Quick start
-### 1) Clone
+### Clone
 ```bash
-git clone https://github.com/oierkid-crypto/stock-analysis-pdf-pipeline.git
-cd stock-analysis-pdf-pipeline
+git clone https://github.com/oierkid-crypto/institutional-equity-research-pipeline.git
+cd institutional-equity-research-pipeline
 ```
 
-### 2) Fetch a live quote snapshot
+### Run a quote snapshot
 ```bash
 python3 scripts/quote_snapshot.py --ticker 300124.SZ
 python3 scripts/quote_snapshot.py --ticker 06656.HK
 ```
 
-### 3) Create a starter JSON scaffold
+### Scaffold a research input file
 ```bash
 python3 scripts/scaffold_input.py --ticker 300124.SZ --output work/inovance.json
 ```
 
-### 4) Fill in your research
-Use `examples/sample-input.json` as reference, then complete the structured fields after doing your research.
+### Build the final research document
+Use the `build` command to turn structured input into the final analyst note.
 
-### 5) Build markdown + PDF
-```bash
-python3 scripts/run_pipeline.py build \
-  --input examples/sample-input.json \
-  --md-output output/sample.md \
-  --pdf-output output/sample.pdf
-```
-
-## Script overview
-### `quote_snapshot.py`
-Fetches a lightweight live snapshot for A-share and Hong Kong stocks.
-
-### `scaffold_input.py`
-Creates a starter JSON with prefilled company, ticker, date, and price fields plus placeholders for your research.
-
-### `build_report.py`
-Renders a markdown report from a reusable template and structured JSON input.
-
-### `render_pdf.py`
-Renders a dependency-light, readable PDF from markdown.
-
-### `run_pipeline.py`
-Convenience wrapper for quote / scaffold / build workflows.
-
-## PDF philosophy
-This repo defaults to a **document-style PDF**.
-The goal is not perfect browser-grade typesetting — the goal is:
-- clear section hierarchy
-- readable typography
-- simple tables
-- investment-note style output
-- easy sharing
+## What is inside
+The repository is organized around four layers:
+- **methodology** — the research logic and valuation discipline
+- **template** — the final analyst-style structure
+- **scripts** — lightweight helpers for quote snapshot, scaffolding, report build, and document rendering
+- **examples** — a sample structured input for onboarding
 
 ## Current boundary
-This is **not** a fully autonomous research agent.
-It is a **research pipeline scaffold**:
-- methodology
-- template
-- scripts
-- structured workflow
+This repository does **not** replace actual research judgment.
+You still need to:
+- read source materials,
+- decide what the real narrative is,
+- judge whether it is already in the numbers,
+- assign valuation logic thoughtfully.
 
-You still need to do the actual research and complete the structured input.
+The point of the repository is to make that work **institutional, repeatable, and readable**.
 
 ---
 
 <a id="中文"></a>
 # 中文
 
-## 这个仓库是干什么的
-**Stock Analysis PDF Pipeline** 是一个可分享、可复用的单票研究 workflow，适用于：
-- `帮我分析 XXXX`
-- `分析一下 XXXX`
-- `看看 XXXX 值不值得买`
-- `给我做一下 XXXX 的估值`
+## 这个仓库是什么
+**Institutional Equity Research Pipeline** 是一个双语的**机构研究方法论仓库**。它不是散装 memo，不是零售风格的 stock blog，也不是套一个 target multiple 就结束的估值模板。
 
-它适合那些不满足于以下几类做法的人：
-- 只讲叙事、不落到报表和估值的研究笔记
-- 只会套总 PE、忽略市场重估逻辑的估值模型
-- 有模板但无法导出完整投资结论的通用 stock template
+它适用于这类工作流：
+- `帮我分析 [公司 / ticker]`
+- `给我一个机构视角的结论`
+- `帮我重做这家公司目标价框架`
+- `重新 underwrite 这只股票的叙事`
 
-这个仓库想做的不是单点工具，而是一套**完整的股票估值 workflow**：
-- 从 **deep research** 出发
-- 把 **市场叙事** 映射回真实收入/利润结构
-- 用 **SOTP / 混合估值 / 核心 PE** 重建估值框架
-- 在接受重估逻辑之前，强制做 **fragility audit**
-- 最后输出高可读的 **Markdown / PDF analyst note**
+这个仓库想做的，不是“又一个股票模板”。  
+它想做的是：把单票研究从第一性原理到最终结论，真正连成一条完整链路。
 
-## 为什么这个名字有搜索相关性
-如果别人会在 GitHub 搜索这些词：
-- `stock analysis`
-- `stock valuation`
-- `equity research pipeline`
-- `investment memo pdf`
-- `single stock analysis`
-- `股票分析`
-- `估值模板`
-- `单票研究 pipeline`
+## 定位
+这个仓库应该被理解成一个**机构研究方法论仓库**，而不是一个展示工具或文档渲染仓库。
 
-这个仓库名称和首页说明都能比较直接命中这些需求。
+它的关键词应该是：
+- `institutional equity research`
+- `equity research methodology`
+- `SOTP valuation model`
+- `single stock valuation framework`
+- `Goldman Sachs style research`
+- `narrative to fundamentals`
+- `fragility audit`
+- `机构研究方法论`
+- `分部估值`
+- `单票估值框架`
 
-## 核心价值主张
-这套 workflow 最重要的不是某一个模板，而是**完整性**。一套真正可用的股票研究流程，应该把这条链路打通：
+## 核心思想
+一套像样的研究流程，应该把五层逻辑真正打通：
 
-> **叙事 → 基本面 → SOTP 估值 → 脆弱性检测 → 目标价 / 评级 / PDF 文档**
+> **市场叙事 → 基本面结构 → SOTP / 混合估值 → 脆弱性审计 → analyst 结论**
 
-它的四个核心价值支柱是：
+这五层里缺任何一层，最后的结论都会看起来比它实际上更强。
 
-1. **叙事必须和基本面打通**  
-   任何重估故事，最终都要能够落回真实的收入来源、利润池质量、分部经济结构。
+## 为什么这套框架存在
+很多公开的股票分析 repo，停得太早。
 
-2. **估值必须反映业务结构，而不是只套一个总 PE**  
-   不同业务需要不同 router：有的适合分部 SOTP，有的适合 PE/PS 混合估值，有的只适合核心业务 PE。
+有的停在：
+- 数据抓取，
+- 研究 memo，
+- target multiple 模板，或
+- 主题式评论。
 
-3. **脆弱性检测不是最后附带的风险提示，而是模型的一部分**  
-   地域集中、渠道依赖、诉讼/IP、监管依赖、交付/质保风险，都应该明确判断是否需要折价，而不是只写成 boilerplate。
+但机构研究需要更多。  
+它需要一套流程，能够回答：
+- **市场以为这家公司是什么**，
+- **这家公司在经济意义上到底是什么**，
+- **什么部分才是真正的新叙事**，
+- **这个叙事应该如何进入估值**，
+- **什么脆弱性会让这次重估失败**，
+- **沿着这条链路，最后应该落到什么目标价 / 评级**。
 
-4. **最终交付物应该像 analyst note，而不是工程中间件**  
-   结论必须落在清晰的 Markdown / PDF 文档里，包含假设、估值推导、目标价、upside/downside 和风险。
+## 方法论支柱
+### 1. 叙事必须翻译成经济结构
+任何重估故事，如果不能映射回：
+- 收入池，
+- 利润池质量，
+- 分部经济结构，
+- 业务组合，或
+- 资本配置逻辑，
 
-## 为什么说这套方案是完整的
-很多公开的股票分析 repo 只覆盖其中一段：
-- 有的偏数据抓取
-- 有的偏 narrative memo
-- 有的只给估值模板
-- 有的停留在故事讨论
+它的分析价值就非常有限。
 
-这套 repo 想覆盖的是完整链路：
-- **叙事层** —— 市场到底在交易什么新故事？
-- **基本面层** —— 收入和利润真正来自哪里？
-- **估值层** —— 应该如何按分部或业务质量重建估值？
-- **脆弱性层** —— 什么因素会让重估失效？
-- **交付层** —— 如何把研究变成可读、可分享的投资文档？
+### 2. 估值必须反映业务结构
+一家公司如果本质上由多个质量不同的业务组成，就不应该被粗暴地塞进一个总 PE。
 
-## 仓库内容
-```text
-.
-├── SKILL.md
-├── README.md
-├── LICENSE
-├── .gitignore
-├── requirements.txt
-├── examples/
-│   └── sample-input.json
-├── templates/
-│   └── output-template.md
-└── scripts/
-    ├── quote_snapshot.py
-    ├── scaffold_input.py
-    ├── build_report.py
-    ├── render_pdf.py
-    └── run_pipeline.py
-```
+这套框架优先使用：
+- **分部 SOTP**：当多个业务应当被区别对待时
+- **PE / PS 混合估值**：当一部分业务已成熟盈利，另一部分仍处于放量阶段时
+- **核心业务 PE**：只有在继续复杂化会变成假精确时才使用
 
-## 这套 pipeline 的逻辑
-1. 确认公司身份和实时行情快照  
-2. 深度研究业务本质和分部结构  
-3. 找出新的估值叙事  
-4. 判断叙事成熟度  
-5. 做脆弱性审计  
-6. 按真实分部经济结构重建估值  
-7. 输出带目标价、upside/downside、rating 的 Markdown / PDF 文档  
+### 3. 脆弱性不是附录里的风险提示，而是估值的一部分
+这套方法把脆弱性直接视为估值输入项。包括：
+- 地域集中度，
+- 渠道集中度，
+- 诉讼 / IP 暴露，
+- 政策依赖，
+- 供应链瓶颈，
+- 库存 / 交付 / 质保风险。
+
+关键不是“有没有风险”。  
+关键是这些风险到底只需要**披露**，还是应该对应**multiple haircut** 或 **scenario discount**。
+
+### 4. 最终交付应该像 analyst note
+最终目标不是工程中间件，而是一份可读的研究结论，里面应该有：
+- 公司定位，
+- variant view，
+- 估值推导，
+- 目标价，
+- upside / downside，
+- 核心风险，
+- 证据引用。
+
+## 如何理解这里说的 Goldman Sachs-style
+在这个仓库里，所谓 **Goldman Sachs-style**，指的是一种机构 sell-side 纪律：
+- 先定义 debate framing，再给结论
+- 估值是结构化推导，不是口号
+- 先讲分部逻辑，不追逐主题热词
+- 假设必须显式写出来
+- downside / variant view 必须清楚
+- 呈现方式要有机构研究的节制感
+
+它**不**代表模仿任何机构的 proprietary model。  
+它代表的是：用机构卖方研究应有的清晰度和严谨度来组织研究。
+
+## SOTP 估值模型，直白地说是什么
+这套框架强调 **SOTP（Sum-of-the-Parts）**，因为很多公司在一个 ticker 下面，其实装着几个不同的经济引擎。
+
+所以问题不只是：
+- “这只股票应该给多少 PE？”
+
+而是：
+- 真实的业务分部是什么？
+- 哪些分部已经是利润池？
+- 哪些分部还在收入放量？
+- 哪些分部该用 PE，哪些该用 PS？
+- 哪些叙事已经成立，哪些还只是 optionality？
+- 当这些部分被合理估值后，隐含股权价值到底是多少？
+
+这就是表面估值 memo 和机构式 underwrite 框架的区别。
+
+## 仓库边界
+这个仓库提供的是一套可复用结构，用于承载：
+- 市场快照
+- 业务拆解
+- 叙事分类
+- 脆弱性审计
+- 估值路由
+- 最终 analyst-style 文档生成
+
+它本质上是一个 **methodology + template + lightweight script** 仓库。  
+它不是一个全自动研究引擎。
 
 ## 快速开始
-### 1）拉取仓库
+### 拉取仓库
 ```bash
-git clone https://github.com/oierkid-crypto/stock-analysis-pdf-pipeline.git
-cd stock-analysis-pdf-pipeline
+git clone https://github.com/oierkid-crypto/institutional-equity-research-pipeline.git
+cd institutional-equity-research-pipeline
 ```
 
-### 2）抓实时行情快照
+### 获取行情快照
 ```bash
 python3 scripts/quote_snapshot.py --ticker 300124.SZ
 python3 scripts/quote_snapshot.py --ticker 06656.HK
 ```
 
-### 3）生成研究输入骨架
+### 生成研究输入骨架
 ```bash
 python3 scripts/scaffold_input.py --ticker 300124.SZ --output work/inovance.json
 ```
 
-### 4）补全研究内容
-参考 `examples/sample-input.json`，把你的研究结果填到结构化 JSON 里。
+### 生成最终研究文档
+使用 `build` 命令把结构化输入转成最终 analyst-style 研究文档。
 
-### 5）生成 markdown + PDF
-```bash
-python3 scripts/run_pipeline.py build \
-  --input examples/sample-input.json \
-  --md-output output/sample.md \
-  --pdf-output output/sample.pdf
-```
-
-## 脚本说明
-### `quote_snapshot.py`
-抓 A 股 / 港股的轻量实时行情快照。
-
-### `scaffold_input.py`
-生成一个半自动化输入 JSON，预填公司、ticker、日期、价格等信息，并保留研究占位符。
-
-### `build_report.py`
-根据结构化 JSON 和模板生成 markdown 报告。
-
-### `render_pdf.py`
-把 markdown 渲染成一个轻依赖、可读性较高的 PDF 文档。
-
-### `run_pipeline.py`
-为 quote / scaffold / build 提供一体化命令入口。
-
-## PDF 输出理念
-这个仓库默认输出的是**文档式 PDF**，而不是工具输出的原始 dump。
-
-目标是：
-- 标题层级清楚  
-- 文档可读  
-- 表格简洁  
-- 适合分享  
-- 像一份投资 memo，而不是命令行日志  
+## 仓库结构
+这个仓库实际分成四层：
+- **methodology** —— 研究逻辑和估值纪律
+- **template** —— 最终 analyst-style 结构
+- **scripts** —— 行情抓取、脚手架生成、报告生成、文档渲染等轻量辅助脚本
+- **examples** —— onboarding 用的样例输入
 
 ## 当前边界
-这**不是**一个全自动研究代理仓库。  
-它更准确地说是一个 **研究 pipeline 脚手架**：
-- 方法论  
-- 模板  
-- 脚本  
-- 结构化工作流  
+这个仓库并不能替代真实的研究判断。  
+你仍然需要：
+- 阅读源材料
+- 判断真正的新叙事是什么
+- 判断它是否已经进入数字
+- 谨慎分配估值逻辑
 
-你仍然需要自己完成真实 research，并把结果填进结构化 JSON。
+这个仓库的作用，是把这些工作变得更**机构化、可复用、可读**。
 
 ---
 

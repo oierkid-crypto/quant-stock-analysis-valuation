@@ -1,6 +1,6 @@
 ---
 name: gs-single-stock-pipeline-v2
-description: Complete V2 single-stock valuation workflow. Starts with deep research, links narrative back to fundamentals, rebuilds value through SOTP/hybrid valuation, and runs fragility audit before the final rating.
+description: Institutional single-stock research methodology. Starts with deep research, translates narrative into fundamentals, rebuilds value through SOTP/hybrid valuation, and runs fragility audit before the final rating.
 version: 2.1.0
 author: Hermes Agent
 license: MIT

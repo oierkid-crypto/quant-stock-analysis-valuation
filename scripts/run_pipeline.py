@@ -11,14 +11,14 @@ def run(cmd):
 
 
 def main():
-    ap = argparse.ArgumentParser(description='Convenience runner for the GS-style stock pipeline.')
+    ap = argparse.ArgumentParser(description='Convenience runner for the institutional equity research pipeline.')
     sub = ap.add_subparsers(dest='command', required=True)
 
     s = sub.add_parser('scaffold', help='Create starter JSON from a ticker')
     s.add_argument('--ticker', required=True)
     s.add_argument('--output', required=True)
 
-    b = sub.add_parser('build', help='Build markdown + PDF from structured input JSON')
+    b = sub.add_parser('build', help='Build the final research document from structured input JSON')
     b.add_argument('--input', required=True)
     b.add_argument('--template', default='templates/output-template.md')
     b.add_argument('--md-output', required=True)
