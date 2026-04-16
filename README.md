@@ -1,4 +1,4 @@
-# Institutional Equity Research Pipeline
+# Quant Stock Analysis Valuation
 
 <p align="center">
   <b>Goldman Sachs-style institutional equity research methodology for single-stock work: narrative → fundamentals → SOTP valuation → fragility audit → analyst note.</b><br/>
@@ -26,7 +26,7 @@
 # English
 
 ## What this repository is
-**Institutional Equity Research Pipeline** is a bilingual methodology repo for people who want single-stock work to read like **institutional equity research**, not like a loose memo, a retail blog post, or a spreadsheet with a target multiple pasted on top.
+**Quant Stock Analysis Valuation** is a bilingual methodology repo for people who want single-stock work to read like **institutional equity research**, not like a loose memo, a retail blog post, or a spreadsheet with a target multiple pasted on top.
 
 It is designed for workflows such as:
 - `Analyze [ticker]`
@@ -156,8 +156,8 @@ It is not a fully autonomous research engine.
 ## Quick start
 ### Clone
 ```bash
-git clone https://github.com/oierkid-crypto/institutional-equity-research-pipeline.git
-cd institutional-equity-research-pipeline
+git clone https://github.com/oierkid-crypto/quant-stock-analysis-valuation.git
+cd quant-stock-analysis-valuation
 ```
 
 ### Run a quote snapshot
@@ -197,7 +197,7 @@ The point of the repository is to make that work **institutional, repeatable, an
 # 中文
 
 ## 这个仓库是什么
-**Institutional Equity Research Pipeline** 是一个双语的**机构研究方法论仓库**。它不是散装 memo，不是零售风格的 stock blog，也不是套一个 target multiple 就结束的估值模板。
+**Quant Stock Analysis Valuation** 是一个双语的**机构研究方法论仓库**。它不是散装 memo，不是零售风格的 stock blog，也不是套一个 target multiple 就结束的估值模板。
 
 它适用于这类工作流：
 - `帮我分析 [公司 / ticker]`
@@ -332,8 +332,8 @@ The point of the repository is to make that work **institutional, repeatable, an
 ## 快速开始
 ### 拉取仓库
 ```bash
-git clone https://github.com/oierkid-crypto/institutional-equity-research-pipeline.git
-cd institutional-equity-research-pipeline
+git clone https://github.com/oierkid-crypto/quant-stock-analysis-valuation.git
+cd quant-stock-analysis-valuation
 ```
 
 ### 获取行情快照
